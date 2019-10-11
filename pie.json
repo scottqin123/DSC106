@@ -1,0 +1,47 @@
+Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Browser market shares in January, 2018'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            }
+        }
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'fulltime_men_applied',
+            y: 4.67
+        }, {
+            name: 'fulltime_women_applied',
+            y: 4.18
+        }, {
+            name: 'fulltime_men_admitted',
+            y: 1.64
+        }, {
+            name: 'fulltime_women_admitted',
+            y: 1.6
+        }, {
+            name: 'fulltime_men_enrolled',
+            y: 1.2
+        }, {
+            name: 'fulltime_women_enrolled',
+            y: 2.61
+        }]
+    }]
+});
